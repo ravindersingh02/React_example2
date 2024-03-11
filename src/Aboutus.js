@@ -4,7 +4,7 @@ import React from "react";
 const  Aboutus = () =>{
     return(
         <>
-            <h3>About us page</h3>
+            <h3>About us page1</h3>
         </>
     )
 }
