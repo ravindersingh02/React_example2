@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autoplay YouTube Video</title>
+</head>
+<body>
+
+    <div  id="videoContainer" style="text-align: center;">
+        <!-- Replace 'VIDEO_ID' with the actual video ID -->
+        <iframe  id="youtubePlayer" width="560" height="315" src="https://www.youtube.com/embed/vXKILdL1SQw?autoplay=1&mute=1&controls=0&rel=0" frameborder="0" allowfullscreen></iframe>
+    </div>
+    
+
+    <div id="logoContainer" style="display: none; text-align: center;">
+        <!-- Your logo/image goes here -->
+        <img src="https://cdn.shopify.com/s/files/1/0769/2232/3225/files/bandanny_transp_bk_1_09f3e000-9a7a-4532-824c-9efe83a48e37.png?v=1700597220" alt="home page video logo"/>
+        <br>
+        <button onclick="playVideoAgain()">Play Again</button>
+    </div>
+
+    <script>
+         // Replace 'VIDEO_ID' with the actual video ID
+        // var videoId = 'vXKILdL1SQw';
+        document.getElementById('youtubePlayer').addEventListener('click', framealert);
+
+        function framealert(){
+            alert('asdsad');
+        }
+        
+
+        const iframe = document.getElementById("youtubePlayer");
+
+        iframe.onload = function() {
+            console.log("The iframe is loaded");
+            setTimeout(timestart, 62000);
+        };
+
+        function timestart(){
+            // document.getElementById('videoContainer').style.display = 'none';
+            document.getElementById('logoContainer').style.display = 'block';
+        }
+
+        // Play the video again
+        function playVideoAgain() {
+          // timestart();
+            // document.getElementById('videoContainer').style.display = 'block';
+            document.getElementById('logoContainer').style.display = 'none';
+
+            // Replace 'VIDEO_ID' with the actual video ID
+            document.getElementById('youtubePlayer').src = "https://www.youtube.com/embed/vXKILdL1SQw?autoplay=1&mute=1&controls=0&rel=0";
+        }
+
+    </script>
+
+</body>
+</html>
